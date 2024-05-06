@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/main_username"
+        android:layout_width="825dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="109dp"
+        android:layout_marginBottom="242dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_background"
+        android:drawableStart="@drawable/ic_user"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="@string/user_name"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/main_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/main_password"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="22dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_background"
+        android:drawableStart="@drawable/ic_password"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/main_remember_me_checkbox"
+        app:layout_constraintEnd_toEndOf="@+id/main_username"
+        app:layout_constraintStart_toStartOf="@+id/main_remember_me_checkbox"
+        app:layout_constraintTop_toBottomOf="@+id/main_username" />
+
+    <CheckBox
+        android:id="@+id/main_remember_me_checkbox"
+        android:layout_width="258dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="29dp"
+        android:checked="true"
+        android:text="@string/remember_me"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/main_register"
+        app:layout_constraintStart_toStartOf="@+id/main_register"
+        app:layout_constraintTop_toBottomOf="@+id/main_password" />
+
+    <Button
+        android:id="@+id/main_register"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="267dp"
+        android:backgroundTint="@drawable/button_background"
+        android:text="@string/register_here"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/main_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_remember_me_checkbox" />
+
+    <Button
+        android:id="@+id/main_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="267dp"
+        android:backgroundTint="@drawable/button_background"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/main_register"
+        app:layout_constraintTop_toBottomOf="@+id/main_username" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
